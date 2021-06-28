@@ -32,7 +32,7 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'SwiftyLocalize/Classes/**/*'
   
-  swift-version = '4.0'
+  s.swift_versions = '4.0'
   
   # s.resource_bundles = {
   #   'SwiftyLocalize' => ['SwiftyLocalize/Assets/*.png']
