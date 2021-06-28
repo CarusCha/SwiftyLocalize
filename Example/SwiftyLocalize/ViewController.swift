@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyLocalize
 
 class ViewController: UIViewController {
 
