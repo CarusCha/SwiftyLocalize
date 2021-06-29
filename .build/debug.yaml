@@ -1,0 +1,78 @@
+client:
+  name: basic
+tools: {}
+targets:
+  "PackageStructure": ["<PackageStructure>"]
+  "SwiftyLocalize-debug.module": ["<SwiftyLocalize-debug.module>"]
+  "SwiftyLocalizePackageTests-debug.test": ["<SwiftyLocalizePackageTests-debug.test>"]
+  "SwiftyLocalizeTests-debug.module": ["<SwiftyLocalizeTests-debug.module>"]
+  "main": ["<SwiftyLocalize-debug.module>"]
+  "test": ["<SwiftyLocalize-debug.module>","<SwiftyLocalizePackageTests-debug.test>","<SwiftyLocalizeTests-debug.module>"]
+default: "main"
+nodes:
+  "/Users/chajonghun/Desktop/SwiftyLocalize/Sources/SwiftyLocalize/":
+    is-directory-structure: true
+  "/Users/chajonghun/Desktop/SwiftyLocalize/Tests/SwiftyLocalizeTests/":
+    is-directory-structure: true
+commands:
+  "<SwiftyLocalize-debug.module>":
+    tool: phony
+    inputs: ["/Users/chajonghun/Desktop/SwiftyLocalize/.build/x86_64-apple-macosx/debug/SwiftyLocalize.build/SwiftyLocalize.swift.o","/Users/chajonghun/Desktop/SwiftyLocalize/.build/x86_64-apple-macosx/debug/SwiftyLocalize.swiftmodule"]
+    outputs: ["<SwiftyLocalize-debug.module>"]
+
+  "<SwiftyLocalizePackageTests-debug.test>":
+    tool: phony
+    inputs: ["/Users/chajonghun/Desktop/SwiftyLocalize/.build/x86_64-apple-macosx/debug/SwiftyLocalizePackageTests.xctest/Contents/MacOS/SwiftyLocalizePackageTests"]
+    outputs: ["<SwiftyLocalizePackageTests-debug.test>"]
+
+  "<SwiftyLocalizeTests-debug.module>":
+    tool: phony
+    inputs: ["/Users/chajonghun/Desktop/SwiftyLocalize/.build/x86_64-apple-macosx/debug/SwiftyLocalizeTests.build/SwiftyLocalizeTests.swift.o","/Users/chajonghun/Desktop/SwiftyLocalize/.build/x86_64-apple-macosx/debug/SwiftyLocalizeTests.swiftmodule"]
+    outputs: ["<SwiftyLocalizeTests-debug.module>"]
+
+  "C.SwiftyLocalize-debug.module":
+    tool: swift-compiler
+    inputs: ["/Users/chajonghun/Desktop/SwiftyLocalize/Sources/SwiftyLocalize/SwiftyLocalize.swift"]
+    outputs: ["/Users/chajonghun/Desktop/SwiftyLocalize/.build/x86_64-apple-macosx/debug/SwiftyLocalize.build/SwiftyLocalize.swift.o","/Users/chajonghun/Desktop/SwiftyLocalize/.build/x86_64-apple-macosx/debug/SwiftyLocalize.swiftmodule"]
+    executable: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    module-name: "SwiftyLocalize"
+    module-output-path: "/Users/chajonghun/Desktop/SwiftyLocalize/.build/x86_64-apple-macosx/debug/SwiftyLocalize.swiftmodule"
+    import-paths: ["/Users/chajonghun/Desktop/SwiftyLocalize/.build/x86_64-apple-macosx/debug"]
+    temps-path: "/Users/chajonghun/Desktop/SwiftyLocalize/.build/x86_64-apple-macosx/debug/SwiftyLocalize.build"
+    objects: ["/Users/chajonghun/Desktop/SwiftyLocalize/.build/x86_64-apple-macosx/debug/SwiftyLocalize.build/SwiftyLocalize.swift.o"]
+    other-args: ["-target","x86_64-apple-macosx10.10","-swift-version","5","-enable-batch-mode","-index-store-path","/Users/chajonghun/Desktop/SwiftyLocalize/.build/x86_64-apple-macosx/debug/index/store","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-Onone","-enable-testing","-g","-j8","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/chajonghun/Desktop/SwiftyLocalize/.build/x86_64-apple-macosx/debug/ModuleCache","-parseable-output","-emit-objc-header","-emit-objc-header-path","/Users/chajonghun/Desktop/SwiftyLocalize/.build/x86_64-apple-macosx/debug/SwiftyLocalize.build/SwiftyLocalize-Swift.h","-color-diagnostics"]
+    sources: ["/Users/chajonghun/Desktop/SwiftyLocalize/Sources/SwiftyLocalize/SwiftyLocalize.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: 8
+
+  "C.SwiftyLocalizePackageTests-debug.test":
+    tool: shell
+    inputs: ["/Users/chajonghun/Desktop/SwiftyLocalize/.build/x86_64-apple-macosx/debug/SwiftyLocalize.build/SwiftyLocalize.swift.o","/Users/chajonghun/Desktop/SwiftyLocalize/.build/x86_64-apple-macosx/debug/SwiftyLocalizeTests.build/SwiftyLocalizeTests.swift.o"]
+    outputs: ["/Users/chajonghun/Desktop/SwiftyLocalize/.build/x86_64-apple-macosx/debug/SwiftyLocalizePackageTests.xctest/Contents/MacOS/SwiftyLocalizePackageTests"]
+    description: "Linking ./.build/x86_64-apple-macosx/debug/SwiftyLocalizePackageTests.xctest/Contents/MacOS/SwiftyLocalizePackageTests"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Users/chajonghun/Desktop/SwiftyLocalize/.build/x86_64-apple-macosx/debug","-o","/Users/chajonghun/Desktop/SwiftyLocalize/.build/x86_64-apple-macosx/debug/SwiftyLocalizePackageTests.xctest/Contents/MacOS/SwiftyLocalizePackageTests","-module-name","SwiftyLocalizePackageTests","-Xlinker","-bundle","-Xlinker","-rpath","-Xlinker","@loader_path/../../../","@/Users/chajonghun/Desktop/SwiftyLocalize/.build/x86_64-apple-macosx/debug/SwiftyLocalizePackageTests.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx","-target","x86_64-apple-macosx10.15","-Xlinker","-add_ast_path","-Xlinker","/Users/chajonghun/Desktop/SwiftyLocalize/.build/x86_64-apple-macosx/debug/SwiftyLocalize.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/chajonghun/Desktop/SwiftyLocalize/.build/x86_64-apple-macosx/debug/SwiftyLocalizeTests.swiftmodule","-L","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib"]
+
+  "C.SwiftyLocalizeTests-debug.module":
+    tool: swift-compiler
+    inputs: ["/Users/chajonghun/Desktop/SwiftyLocalize/Tests/SwiftyLocalizeTests/SwiftyLocalizeTests.swift","/Users/chajonghun/Desktop/SwiftyLocalize/.build/x86_64-apple-macosx/debug/SwiftyLocalize.swiftmodule"]
+    outputs: ["/Users/chajonghun/Desktop/SwiftyLocalize/.build/x86_64-apple-macosx/debug/SwiftyLocalizeTests.build/SwiftyLocalizeTests.swift.o","/Users/chajonghun/Desktop/SwiftyLocalize/.build/x86_64-apple-macosx/debug/SwiftyLocalizeTests.swiftmodule"]
+    executable: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    module-name: "SwiftyLocalizeTests"
+    module-output-path: "/Users/chajonghun/Desktop/SwiftyLocalize/.build/x86_64-apple-macosx/debug/SwiftyLocalizeTests.swiftmodule"
+    import-paths: ["/Users/chajonghun/Desktop/SwiftyLocalize/.build/x86_64-apple-macosx/debug"]
+    temps-path: "/Users/chajonghun/Desktop/SwiftyLocalize/.build/x86_64-apple-macosx/debug/SwiftyLocalizeTests.build"
+    objects: ["/Users/chajonghun/Desktop/SwiftyLocalize/.build/x86_64-apple-macosx/debug/SwiftyLocalizeTests.build/SwiftyLocalizeTests.swift.o"]
+    other-args: ["-target","x86_64-apple-macosx10.15","-swift-version","5","-enable-batch-mode","-index-store-path","/Users/chajonghun/Desktop/SwiftyLocalize/.build/x86_64-apple-macosx/debug/index/store","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-Onone","-enable-testing","-g","-j8","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/chajonghun/Desktop/SwiftyLocalize/.build/x86_64-apple-macosx/debug/ModuleCache","-parseable-output","-color-diagnostics"]
+    sources: ["/Users/chajonghun/Desktop/SwiftyLocalize/Tests/SwiftyLocalizeTests/SwiftyLocalizeTests.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: 8
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/chajonghun/Desktop/SwiftyLocalize/Sources/SwiftyLocalize/","/Users/chajonghun/Desktop/SwiftyLocalize/Tests/SwiftyLocalizeTests/","/Users/chajonghun/Desktop/SwiftyLocalize/Package.swift","/Users/chajonghun/Desktop/SwiftyLocalize/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

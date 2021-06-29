@@ -1,0 +1,5 @@
+version: "Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)"
+options: "84d4c202bdc64315a34b7d1bea58b4a7"
+build_time: [1624938017, 806049000]
+inputs:
+  "/Users/chajonghun/Desktop/SwiftyLocalize/Tests/SwiftyLocalizeTests/SwiftyLocalizeTests.swift": [1624937914, 941975757]

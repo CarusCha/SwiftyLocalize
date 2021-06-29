@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/chajonghun/Desktop/SwiftyLocalize/.build/x86_64-apple-macosx/debug/SwiftyLocalize.build/master.swiftdeps"
+  },
+  "/Users/chajonghun/Desktop/SwiftyLocalize/Sources/SwiftyLocalize/SwiftyLocalize.swift": {
+    "dependencies": "/Users/chajonghun/Desktop/SwiftyLocalize/.build/x86_64-apple-macosx/debug/SwiftyLocalize.build/SwiftyLocalize.d",
+    "object": "/Users/chajonghun/Desktop/SwiftyLocalize/.build/x86_64-apple-macosx/debug/SwiftyLocalize.build/SwiftyLocalize.swift.o",
+    "swiftmodule": "/Users/chajonghun/Desktop/SwiftyLocalize/.build/x86_64-apple-macosx/debug/SwiftyLocalize.build/SwiftyLocalize~partial.swiftmodule",
+    "swift-dependencies": "/Users/chajonghun/Desktop/SwiftyLocalize/.build/x86_64-apple-macosx/debug/SwiftyLocalize.build/SwiftyLocalize.swiftdeps"
+  }
+}
